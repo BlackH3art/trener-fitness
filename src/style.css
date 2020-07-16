@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  background-color: #363636;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 5px 1px 10px honeydew;
+
+}
+
+.headcontainer {
+  height: 100px;
+
+}
+
+header .headcontainer nav {
+  position: absolute;
+  left: 50vw;
+  top: 60px;
+  width: 35%;
+}
+
+header .headcontainer nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  color: #d9d9d9;
+  font-size: 24px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+}
+
+header .headcontainer nav ul li {
+  text-align: center;
+  flex-grow: 1;
+}
+
+header .headcontainer img {
+  display: block;
+  position: absolute;
+  height: 100px;
+  left: 7vw;
+}
+
+.offer {
+  background-image: url("img/background-full.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+  opacity: 0.65;
+}
+
+.shape {
+  display: flex;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60%;
+  background-image: linear-gradient(to right, #2bff00 50%, #7dff56 100%);
+  opacity: 0.80;
+  clip-path: polygon(0 0, 20% 0, 100% 50%, 20% 100%, 0 100%);
+  z-index: 0;
+  transform: translateX(-100%);
+  animation: triangleShape 1s ease-in 1;
+  animation-fill-mode: forwards;
+  animation-delay: .2s;
+  transition: .2s;
+}
+
+.shape2 {
+  display: flex;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60%;
+  background-image: linear-gradient(to left, #00c8ff 50%, #75e1ff 100%);
+  opacity: 0.82;
+  clip-path: polygon(100% 0, 80% 0, 0 50%, 80% 100%, 100% 100%);
+  z-index: 0;
+  transform: translateX(100%);
+  animation: triangleShape2 1s ease-in 1;
+  animation-fill-mode: forwards;
+  animation-delay: .2s;
+  transition: .2s;
+
+}
+
+.shape:hover {
+  background-image: #2bff00;
+  opacity: .95;
+  left: 20px;
+}
+.shape2:hover {
+  background-image: #00c8ff;
+  opacity: .95;
+  right: 20px;
+}
+.contentshape h1 {
+
+  font-size: 55px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(0, 0, 0);
+  animation: appear 2.2s linear;
+
+}
+.contentshape p {
+
+  font-size: 22px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-shadow: 1px 2px 4px black;
+  animation: appear 2.2s linear;
+
+}
+.contentshape {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+
+}
+.gym {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: .4s;
+  width: 50vw;
+}
+.gym:hover {
+  cursor: pointer;
+}
+
+.outdoor {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: .4s;
+  width: 50vw;
+}
+.outdoor:hover {
+  cursor: pointer;
+}
+
+@keyframes triangleShape {
+  0% {transform: translateX(-100%);}
+  75% {transform: translateX(0%);}
+  100% {transform: translateX(-10%);}
+}
+
+@keyframes triangleShape2 {
+  0% {transform: translateX(+100%);}
+  75% {transform: translateX(0%);}
+  100% {transform: translateX(10%);}
+}
+
+@keyframes appear {
+  0% {opacity: 0;}
+  40% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+/* ******************************** */
+
+section.presentation {
+  background-color: rgb(243, 243, 243);
+  min-height: 100vh;
+}
