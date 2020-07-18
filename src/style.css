@@ -9,17 +9,17 @@ body {
 }
 
 header {
-  position: fixed;
-  background-color: #363636;
-  height: 100px;
+  position: absolute;
+  background-color: #000;
+  height: 70px;
   width: 100%;
   z-index: 1;
-  box-shadow: 5px 1px 10px honeydew;
+  box-shadow: 5px 1px 10px black;
 
 }
 
 .headcontainer {
-  height: 100px;
+  height: 70px;
 
 }
 
@@ -48,8 +48,10 @@ header .headcontainer nav ul li {
 header .headcontainer img {
   display: block;
   position: absolute;
-  height: 100px;
-  left: 7vw;
+  height: 120%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .offer {
@@ -106,11 +108,13 @@ header .headcontainer img {
   background-image: #2bff00;
   opacity: .95;
   left: 20px;
+  z-index: 1;
 }
 .shape2:hover {
   background-image: #00c8ff;
   opacity: .95;
   right: 20px;
+  z-index: 1;
 }
 .contentshape h1 {
 
@@ -143,7 +147,7 @@ header .headcontainer img {
   align-items: center;
   text-align: center;
   transition: .4s;
-  width: 50vw;
+  width: 100%;
 }
 .gym:hover {
   cursor: pointer;
@@ -156,7 +160,7 @@ header .headcontainer img {
   align-items: center;
   text-align: center;
   transition: .4s;
-  width: 50vw;
+  width: 100%;
 }
 .outdoor:hover {
   cursor: pointer;
