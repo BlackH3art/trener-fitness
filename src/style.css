@@ -8,13 +8,15 @@ body {
   overflow-x: hidden;
 }
 
+
+/* ************************ HEADER ****************************** */
 header {
   position: absolute;
   background-color: #000;
   height: 70px;
   width: 100%;
-  z-index: 1;
-  box-shadow: 5px 1px 10px black;
+  z-index: 12;
+  box-shadow: 5px 1px 10px rgb(99, 99, 99);
 
 }
 
@@ -23,26 +25,35 @@ header {
 
 }
 
-header .headcontainer nav {
+header .headcontainer nav.navSocial {
   position: absolute;
-  left: 50vw;
-  top: 60px;
-  width: 35%;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
 }
 
-header .headcontainer nav ul {
+header .headcontainer nav.navSocial ul.ulSocial {
   display: flex;
   justify-content: center;
   list-style: none;
   color: #d9d9d9;
-  font-size: 24px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
   width: 100%;
 }
 
-header .headcontainer nav ul li {
+header .headcontainer nav.navSocial ul.ulSocial li {
   text-align: center;
   flex-grow: 1;
+}
+header .headcontainer nav.navSocial ul.ulSocial li a {
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: .3s;
+}
+header .headcontainer nav.navSocial ul.ulSocial li a:hover {
+  color: rgb(161, 159, 159);
+  cursor: pointer;
 }
 
 header .headcontainer img {
@@ -54,6 +65,8 @@ header .headcontainer img {
   transform: translate(-50%, -50%);
 }
 
+/* ************************************************************************************************** */
+
 .offer {
   background-image: url("img/background-full.jpg");
   background-size: cover;
@@ -62,7 +75,7 @@ header .headcontainer img {
   width: 100%;
   height: 100vh;
   z-index: -2;
-  opacity: 0.65;
+  opacity: 1;
 }
 
 .shape {
@@ -78,7 +91,7 @@ header .headcontainer img {
   clip-path: polygon(0 0, 20% 0, 100% 50%, 20% 100%, 0 100%);
   z-index: 0;
   transform: translateX(-100%);
-  animation: triangleShape 1s ease-in 1;
+  animation: triangleShape .8s ease-in 1;
   animation-fill-mode: forwards;
   animation-delay: .2s;
   transition: .2s;
@@ -97,7 +110,7 @@ header .headcontainer img {
   clip-path: polygon(100% 0, 80% 0, 0 50%, 80% 100%, 100% 100%);
   z-index: 0;
   transform: translateX(100%);
-  animation: triangleShape2 1s ease-in 1;
+  animation: triangleShape2 .8s ease-in 1;
   animation-fill-mode: forwards;
   animation-delay: .2s;
   transition: .2s;
@@ -125,11 +138,11 @@ header .headcontainer img {
 
 }
 .contentshape p {
-
+  text-transform: uppercase;
   font-size: 22px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  text-shadow: 1px 2px 4px black;
+  text-shadow: 1px 2px 15px black;
   animation: appear 2.2s linear;
 
 }
