@@ -6,13 +6,13 @@ class Gym extends Component {
   state = {  }
 
   handleClick() {
-    console.log('click');
+    // console.log('click');
   }
   render() { 
     return ( 
       <>
-        <div className="shape" onClick={this.handleClick}>
-          <div className="gym">
+        <div style={this.props.triangleStyle} className="shape" onClick={this.handleClick}>
+          <div style={this.props.container}>
             <h1>Gym</h1>
             <p>Trening na siłowni </p>
           </div>

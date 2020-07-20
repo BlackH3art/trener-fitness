@@ -8,8 +8,8 @@ class Outdoor extends Component {
   render() { 
     return ( 
       <>
-        <div className="shape2">
-          <div className="outdoor">
+        <div style={this.props.triangleStyle} className="shape2">
+          <div style={this.props.container}>
             <h1>Outdoor</h1>
             <p>Trening w plenerze</p>
           </div>
