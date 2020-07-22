@@ -49,6 +49,7 @@ header nav.navSocial ul.ulSocial li a:hover {
   opacity: 0.80;
   clip-path: polygon(0 0, 20% 0, 100% 50%, 20% 100%, 0 100%);
   transform: translateX(-100%);
+  z-index: 0;
 }
 
 .shape2 {
@@ -60,6 +61,7 @@ header nav.navSocial ul.ulSocial li a:hover {
   opacity: 0.82;
   clip-path: polygon(100% 0, 80% 0, 0 50%, 80% 100%, 100% 100%);
   transform: translateX(+100%);
+  z-index: 0;
 
 }
 
@@ -67,7 +69,7 @@ header nav.navSocial ul.ulSocial li a:hover {
   background-image: #2bff00;
   opacity: .95;
   left: 20px;
-  z-index: 1;
+  z-index: 2;
 }
 .shape2:hover {
   background-image: #00c8ff;

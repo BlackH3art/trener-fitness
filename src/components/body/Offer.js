@@ -12,7 +12,6 @@ class Offer extends Component {
       top: "0",
       height: "100%",
       width: "60%",
-      zIndex: "0",
       transition: ".2s"
     },
     hpContainer: {
@@ -24,9 +23,27 @@ class Offer extends Component {
       transition: ".4s",
       width: "100%",
       cursor: "pointer"
-    }
+    },
+    gymActive: false,
+    outdoorActive: false,
    }
 
+  gymClicked() {
+    if (!this.state.gymActive) {
+      this.setState({
+        gymActive: true,
+        outdoorActive: false
+      })
+    }
+  }
+  outdoorClicked() {
+    if (!this.state.outdoorActive) {
+      this.setState({
+        gymActive: false,
+        outdoorActive: true
+      })
+    }
+  }
   
   render() { 
 
@@ -39,10 +56,15 @@ class Offer extends Component {
             <Gym 
               triangleStyle={this.state.triangleStyle}
               container={this.state.hpContainer}
+              chosen={this.state.gymActive}
+              clicker={this.gymClicked.bind(this)}
             />
             <Outdoor 
               triangleStyle={this.state.triangleStyle}
               container={this.state.hpContainer}
+              chosen={this.state.outdoorActive}
+              clicker={this.outdoorClicked.bind(this)}
+
             />
           </div>
         </section>

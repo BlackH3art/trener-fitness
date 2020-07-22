@@ -3,20 +3,29 @@
 import React, { Component } from 'react';
 
 class Gym extends Component {
-  state = {  }
+  state = { 
+    active: {
+      backgroundImage: "#2bff00",
+      opacity: "1",
+      left: "30px",
+      zIndex: "1",
+      ...this.props.triangleStyle
+    },
+   }
 
   handleClick() {
-    // console.log('click');
+    //
   }
   render() { 
     return ( 
       <>
-        <div style={this.props.triangleStyle} className="shape" onClick={this.handleClick}>
+        <div style={this.props.chosen ? this.state.active : this.props.triangleStyle} className="shape" onClick={this.props.clicker}>
           <div style={this.props.container}>
             <h1>Gym</h1>
             <p>Trening na siłowni </p>
           </div>
         </div>
+
       </>
      );
   }

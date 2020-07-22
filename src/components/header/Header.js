@@ -9,7 +9,8 @@ import NavSocial from './NavSocial';
 
 class Header extends Component {
   state = {
-    headerActive: false
+    headerActive: false,
+
   }
 
   handleHeaderClick() {
