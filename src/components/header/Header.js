@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import logo from '../img/logo2-white-other.png';
 
 import NavSocial from './NavSocial';
+import NavMain from './NavMain';
 
 class Header extends Component {
   state = {
@@ -36,6 +37,7 @@ class Header extends Component {
       <>
         <header style={headerStyle}>
             <img style={headerImgStyle} src={logo} alt="ssssssss"/>
+            <NavMain />
             <NavSocial />
         </header>
       </>

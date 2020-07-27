@@ -1,0 +1,59 @@
+:root {
+  --green: #15ff00;
+  --blue: #00e5ff;
+}
+
+header nav.navMain {
+  position: absolute;
+  display: flex;
+  top: 55%;
+  left: 30%;
+  transform: translateY(-30%);
+  width: 700px;
+  overflow: hidden;
+
+}
+header ul.ulMain {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Mulish';
+  font-weight: 400;
+  list-style: none;
+  color: #d9d9d9;
+  font-size: 1em;
+  width: 100%;
+}
+header ul.ulMain li {
+  display: block;
+  position: relative;
+  flex-grow: 0;
+  transition: .3s;
+  text-align: center;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+header ul.ulMain li:hover {
+  color: #8c8c8c;
+  cursor: pointer;
+}
+span {
+  display: block;
+  position: absolute;
+  background-color: var(--blue);
+  margin-top: 5px;
+}
+header ul.ulMain li:hover > span {
+  height: 2px;
+  width: 100%;
+  animation: hoverSpanNavMain .4s linear forwards;
+}
+
+@keyframes hoverSpanNavMain {
+  0% {transform: translateX(-100%);}
+  40% {transform: translateX(+15%); width: 100%;}
+  70% {width: 90%;}
+  80% {transform: translateX(+5%); }
+  100% {transform: translateX(10%); width: 80%;}
+}

@@ -7,6 +7,12 @@
 body {
   overflow-x: hidden;
 }
+div.wholeBodyContainer {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 
 /* ************************ HEADER ****************************** */
@@ -22,9 +28,11 @@ header nav.navSocial ul.ulSocial li a {
   transition: .3s;
 }
 header nav.navSocial ul.ulSocial li a:hover {
-  color: rgb(87, 87, 87);
+  color: #8c8c8c;
   cursor: pointer;
 }
+
+
 
 
 /* ************************************************************************************************** */

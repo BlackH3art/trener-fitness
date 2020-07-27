@@ -14,18 +14,21 @@ class NavSocial extends Component {
   render() { 
     const navSocialStyle = {
       position: "absolute",
-      right: "50px",
-      top: "50%",
+      display: "block",
+      right: "30px",
+      top: "30%",
       transform: "translateY(-50%)",
-      width: "100px"
+      width: "100px",
+      // borderBottom: "1px solid white"
     };
     const ulSocialStyle = {
       display: "flex",
-      justifyContent: "center",
+      justifyContent: "space-between",
       listStyle: "none",
       color: "#d9d9d9",
       fontSize: "18px",
-      width: "100%"
+      width: "100%",
+      paddingBottom: "5px"
     };
 
 
