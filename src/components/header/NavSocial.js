@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 
-
 class NavSocial extends Component {
 
   state = {
@@ -32,8 +31,8 @@ class NavSocial extends Component {
 
     return ( 
       <>
-        <nav style={navSocialStyle} className="navSocial">
-          <ul style={ulSocialStyle} className="ulSocial">
+        <nav className="navSocial" style={navSocialStyle}>
+          <ul className="ulSocial" style={ulSocialStyle}>
             <li><a href="https://www.facebook.com/marcin.kubica.735" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} /></a></li>
             <li><a href="https://twitter.com/maybeNoT_or_NoT" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
             <li><a href="https://www.instagram.com/sniperkmn/?hl=pl" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a></li>

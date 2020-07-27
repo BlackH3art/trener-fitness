@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import Offer from './Offer'
+// import Offer from './Offer';
+import MainPage from './MainPage'
 
 
 
@@ -9,7 +10,8 @@ class Body extends Component {
   render() { 
     return ( 
       <>
-        <Offer /> 
+        <MainPage />
+        {/* <Offer />  */}
       </>
      );
   }

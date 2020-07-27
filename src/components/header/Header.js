@@ -2,64 +2,40 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react';
 
-import logoTextWhite from '../img/logo-text-white.png';
-import logo from '../img/logo.png';
+import logo from '../img/logo2-white-other.png';
 
 import NavSocial from './NavSocial';
 
 class Header extends Component {
   state = {
-    headerActive: false,
+    
 
   }
 
-  handleHeaderClick() {
-    this.setState({
-      headerActive: !this.state.headerActive
-    })
-  }
+  
 
   render() { 
 
-    const headerStyle = { 
-      position: "absolute",
-      backgroundColor: "#000",
-      height: "70px",
+    const headerStyle = {
+      position: "fixed",
+      backgroundColor:  "rgba(0, 0, 0, 0.5)",
+      height: "80px",
       width: "100%",
-      zIndex: "12",
       boxShadow: "5px 1px 10px rgb(99, 99, 99)",
-      transition: ".5s"
+      zIndex: '1',
     }
-    const headerStyleActive = {
-      position: "absolute",
-      backgroundColor: "rgb(192, 192, 192)",
-      height: "50px",
-      width: "100%",
-      zIndex: "12",
-      boxShadow: "5px 1px 10px rgb(99, 99, 99)",
-      transition: ".5s"
-    }
-    const headerImgStyle = { 
+    const headerImgStyle = {
       display: "block",
-      position: "absolute",
-      height: "120%",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)"
+      height: "90%",
+      paddingTop: "5px"
     }
-    const headerImgStyleActive = { 
-      display: "block",
-      position: "absolute",
-      height: "120%",
-      top: "50%",
-      left: "10%",
-      transform: "translate(-50%, -50%)"
-    }
+
+
 
     return ( 
       <>
-        <header onClick={this.handleHeaderClick.bind(this)} style={this.state.headerActive ? headerStyleActive : headerStyle}>
-            <img style={this.state.headerActive ? headerImgStyleActive : headerImgStyle} src={this.state.headerActive ? logoTextWhite : logo} alt=""/>
+        <header style={headerStyle}>
+            <img style={headerImgStyle} src={logo} alt="ssssssss"/>
             <NavSocial />
         </header>
       </>

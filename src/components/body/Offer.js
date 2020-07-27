@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Gym from './Gym';
 import Outdoor from './Outdoor';
+import GymPresentation from './presentation/GymPresentation';
+import OutdoorPresentation from './presentation/OutdoorPresentation';
 
 class Offer extends Component {
   state = { 
@@ -68,6 +70,8 @@ class Offer extends Component {
             />
           </div>
         </section>
+        {this.state.gymActive ? <GymPresentation /> : ""}
+        {this.state.outdoorActive ? <OutdoorPresentation /> : ""}
       </>
      );
   }
