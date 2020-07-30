@@ -165,7 +165,7 @@ div.imgContainerLeft {
   min-width: 30%;
   margin-top: 15px;
   margin-left: 15px;
-  background-image: url("components/img/board.png");
+  /* background-image: url("components/img/board.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center 50%;

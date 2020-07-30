@@ -1,0 +1,28 @@
+
+
+div.iconBox {
+  display: grid;
+  margin: 2em 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 125px calc(1.5em + 3em) 1fr;
+  text-align: center;
+  font-family: 'Mulish', sans-serif;
+  padding: 20px 0;
+}
+
+
+
+div.iconBox img {
+  margin: 0 auto;
+  height: 125px;
+  width: auto;
+
+}
+
+div.iconBox h2 {
+  padding: 20px 0;
+}
+div.iconBox p {
+  padding: 0 20px;
+  align-self: left;
+}

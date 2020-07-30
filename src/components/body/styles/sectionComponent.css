@@ -1,6 +1,42 @@
+:root {
+  --green: #15ff00;
+  --blue: #00e5ff;
+}
+
 div.sectionContainer {
   position: relative;
   width: 100%;
   min-height: 50vh;
   background-color: #ebebeb;
+}
+
+div.sectionHeading h1 {
+  color: var(--blue);
+  font-family: 'Mulish';
+  font-weight: 800;
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+}
+div.sectionHeading h1::before {
+  content: "Co ";
+  color: #000000;
+}
+div.sectionHeading h1::after {
+  content: " osiągniemy?";
+  color: var(--green);
+}
+
+div.iconsContainer {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+div.boxForIconBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 85%;
+  margin: 0 auto;
 }
