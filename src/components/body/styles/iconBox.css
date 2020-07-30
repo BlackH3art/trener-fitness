@@ -16,7 +16,6 @@ div.iconBox img {
   margin: 0 auto;
   height: 125px;
   width: auto;
-
 }
 
 div.iconBox h2 {
@@ -24,5 +23,36 @@ div.iconBox h2 {
 }
 div.iconBox p {
   padding: 0 20px;
-  align-self: left;
+}
+
+@media (max-width: 560px) {
+  div.iconBox {
+    margin: 0 0;
+  }
+
+  div.iconBox p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+
+  div.iconBox h2 {
+    font-size: 20px;
+  }
+  div.iconBox p {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 1025px) {
+  div.iconBox {
+    margin: 20px 0;
+  }
+  div.iconBox h2 {
+    font-size: 22px;
+    padding: 10px 0;
+  }
+  div.iconBox p {
+    font-size: 1em;
+  }
 }

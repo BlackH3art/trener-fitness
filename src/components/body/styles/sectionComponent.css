@@ -6,7 +6,6 @@
 div.sectionContainer {
   position: relative;
   width: 100%;
-  min-height: 50vh;
   background-color: #ebebeb;
 }
 
@@ -39,4 +38,35 @@ div.boxForIconBoxes {
   grid-template-columns: 1fr 1fr 1fr;
   width: 85%;
   margin: 0 auto;
+}
+
+
+@media (max-width: 560px) {
+  div.sectionHeading h1 {
+    font-size: 1.6em;
+    padding: 30px;
+  }
+  div.boxForIconBoxes {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  div.sectionHeading h1 {
+    font-size: 2.1em;
+    padding: 30px;
+  }
+  div.boxForIconBoxes {
+    width: 95%;
+  }
+}
+@media (max-width: 1025px) {
+  div.sectionHeading h1 {
+    font-size: 2.1em;
+    padding: 30px;
+  }
+  div.boxForIconBoxes {
+    width: 95%;
+  }
 }

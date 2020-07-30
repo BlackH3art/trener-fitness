@@ -118,7 +118,7 @@ div.mainContainer button {
   div.main {
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center left 10%;
+    background-position: left 10%;
   }
 }
 @media (max-width: 960px) {
@@ -148,7 +148,7 @@ div.mainContainer button {
     font-size: 2em;
   }
   div.mainContainer p {
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin: 0 20px;
   }
   div.mainContainer button {
