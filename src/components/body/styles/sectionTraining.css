@@ -1,0 +1,43 @@
+div.sectionTrainingHeading h1{
+    color: var(--green);
+    font-family: 'Mulish';
+    font-weight: 800;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+}
+div.sectionTrainingHeading h1::before {
+  content: "Rodzaje";
+  color: black;
+}
+div.trainingsContainer {
+  width: 100%;
+  background-color: #454545;
+  margin-bottom: 3rem;
+}
+div.boxTrainingBoxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 1025px) {
+  div.boxTrainingBoxes {
+    width: 100%;
+  }
+  div.sectionTrainingHeading h1{
+    font-weight: 800;
+    font-size: 2.1em;
+    padding: 30px;
+}
+}
+
+@media (max-width: 800px) {
+  div.boxTrainingBoxes {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+}

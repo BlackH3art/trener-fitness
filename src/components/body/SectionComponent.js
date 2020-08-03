@@ -34,9 +34,7 @@ class SectionComponent extends Component {
    }
 
 
- 
 
-  
   
   render() { 
     const iconsList = this.state.iconsObjects.map(({id, img, title, text}) => (

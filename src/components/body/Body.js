@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import Offer from './Offer';
 import MainPage from './MainPage';
 import SectionComponent from './SectionComponent';
+import SectionTraining from './SectionTraining'
 
 
 
@@ -14,6 +15,7 @@ class Body extends Component {
         <div className="wholeBodyContainer">
           <MainPage />
           <SectionComponent />
+          <SectionTraining />
         </div>
 
         {/* <Offer />  */}
