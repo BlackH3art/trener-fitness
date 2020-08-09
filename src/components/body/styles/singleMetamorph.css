@@ -1,0 +1,28 @@
+div.headingContainer div.metamorphContainer {
+  height: 450px;
+  width: 700px;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 30% 30% 1fr;
+  grid-template-rows: 300px 150px;
+  margin: 40px 40px;
+}
+
+/* children of main grid */
+
+div.metamorphContainer div.beforeContainer {
+  background-color: green;
+}
+
+div.metamorphContainer div.afterContainer {
+  background-color: blue;
+}
+
+div.metamorphContainer div.morphStats {
+  background-color: darkgrey;
+}
+
+div.metamorphContainer div.descriptionContainer {
+  background-color: yellow;
+  grid-column: 1/4;
+}

@@ -1,0 +1,102 @@
+div.headingContainer {
+  background-color: #fff;
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+
+}
+div.headingContainer h1 {
+  font-weight: 800;
+  font-size: 3em;
+  width: 100%;
+  padding: 50px;
+  margin-left: 10%;
+}
+
+div.headingContainer div.aboutContainer div.aboutContentBox img {
+  display: block;
+  height: 100%;  
+  border-radius: 75%;
+}
+
+div.headingContainer div.aboutContainer {
+  height: 40vh;
+  width: 100%;
+  background-image: linear-gradient(to right, var(--green), var(--blue));
+}
+
+div.headingContainer div.aboutContainer div.aboutContentBox {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 80%;
+}
+
+div.headingContainer div.aboutContainer div.aboutContentBox div.aboutTextContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 100px;
+  grid-column-gap: 20px;
+  height: 80%;
+  width: 100%;
+}
+
+div.aboutContentBox div.aboutTextContainer p {
+  grid-column: 1/3;
+  margin: 0px 20px;
+  font-size: 1.2rem;
+}
+
+div.aboutContentBox div.aboutTextContainer button {
+  margin: 10px 0px 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.aboutContentBox div.aboutTextContainer button.moreAboutMe {
+  margin-left: 20px;
+  background: none;
+  border: 4px solid var(--button-color);
+}
+
+div.aboutContentBox div.aboutTextContainer button.howCooperate {
+  margin-right: 20px;
+  background-color: var(--button-color);
+  border: none;
+}
+
+
+
+@media (max-width: 1025px) {
+  div.headingContainer div.aboutContainer div.aboutContentBox {
+    width: 90%;
+  }
+  div.headingContainer div.aboutContainer div.aboutContentBox div.aboutTextContainer {
+    width: 80%;
+  }
+  div.headingContainer h1 {
+    font-size: 2.1em;
+    padding: 30px;
+    margin: 0 auto
+  }
+  div.aboutContentBox div.aboutTextContainer p {
+    font-size: 1rem;
+  }
+  div.aboutContentBox div.aboutTextContainer button {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+
+}
+
+@media (max-width: 800px) {
+
+}
