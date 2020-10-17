@@ -10,12 +10,11 @@ div.headingContainer div.metamorphContainer {
 
 /* children of main grid */
 
-div.metamorphContainer div.beforeContainer {
-  background-color: green;
-}
-
-div.metamorphContainer div.afterContainer {
-  background-color: blue;
+div.beforeContainer, div.afterContainer {
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.metamorphContainer div.morphStats {

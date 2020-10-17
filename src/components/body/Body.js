@@ -15,6 +15,7 @@ class Body extends Component {
     return ( 
       <>
         <div className="wholeBodyContainer">
+          {/* <Offer />  */}
           <MainPage />
           <SectionComponent />
           <SectionTraining />
@@ -22,7 +23,6 @@ class Body extends Component {
           <SectionMetamorph />
         </div>
 
-        {/* <Offer />  */}
       </>
      );
   }

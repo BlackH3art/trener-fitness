@@ -9,7 +9,7 @@ div.headingContainer h1 {
   font-size: 3em;
   width: 100%;
   padding: 50px;
-  margin-left: 10%;
+  margin-left: 15%;
 }
 
 div.headingContainer div.aboutContainer div.aboutContentBox img {
@@ -33,7 +33,7 @@ div.headingContainer div.aboutContainer div.aboutContentBox {
   justify-content: center;
   align-items: center;
   height: 80%;
-  width: 80%;
+  width: 60%;
 }
 
 div.headingContainer div.aboutContainer div.aboutContentBox div.aboutTextContainer {
@@ -52,7 +52,7 @@ div.aboutContentBox div.aboutTextContainer p {
 }
 
 div.aboutContentBox div.aboutTextContainer button {
-  margin: 10px 0px 10px;
+  margin: 7px 0px 40px;
   color: white;
   font-weight: bold;
   font-size: 1.3rem;
