@@ -1,27 +1,111 @@
 div.headingContainer div.metamorphContainer {
   height: 450px;
   width: 700px;
-  background-color: red;
   display: grid;
   grid-template-columns: 30% 30% 1fr;
   grid-template-rows: 300px 150px;
   margin: 40px 40px;
 }
+div.metamorph-singlestat-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+
+}
+
+div.before-sign, div.after-sign {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50%;
+  bottom: -15px;
+  color: white;
+}
+
+div.before-sign {
+  background-color: red;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 25% 100%, 0 50%);
+  right: 0;
+}
+
+div.after-sign {
+  background-color: rgb(86, 235, 74);
+  clip-path: polygon(75% 0, 0 0, 0 100%, 75% 100%, 100% 50%);
+}
+
+div.before-sign h2, div.after-sign h2 {
+  font-size: 1.3rem;
+  display: block;
+  position: absolute;
+}
+div.before-sign h2 {
+  right: 10px;
+}
+div.after-sign h2 {
+  left: 25px;
+}
+
+
+h2.metamorph-name {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+  border-bottom: 2px solid rgb(0, 237, 255);
+  margin-bottom: 20px;
+}
+
+h2.metamorph-stat {
+  font-size: 1.6rem;
+  padding: 0px 20px;
+}
+
+span.metamorph-trening-stat {
+  display: block;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+span.metamorph-description1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+span.metamorph-description2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: rgb(0, 237, 255);
+}
+.metamorph-staticon {
+  font-size: 2rem;
+}
 
 /* children of main grid */
 
 div.beforeContainer, div.afterContainer {
-  overflow: hidden;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 div.metamorphContainer div.morphStats {
-  background-color: darkgrey;
+  background-color: rgb(56, 56, 56);
+  color: white;
 }
 
 div.metamorphContainer div.descriptionContainer {
-  background-color: yellow;
+  background-color: rgb(235, 235, 235);
   grid-column: 1/4;
+}
+
+div.descriptionContainer div {
+  height: 80%;
+  width: 90%;
+  margin: auto;
+  margin-top: 25px
+}
+
+div.descriptionContainer div p {
+  margin-top: 8px;
 }

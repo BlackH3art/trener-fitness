@@ -38,13 +38,13 @@ header ul.ulMain li:hover {
   color: #8c8c8c;
   cursor: pointer;
 }
-span {
+span.blue-menu-slider {
   display: block;
   position: absolute;
   background-color: var(--blue);
   margin-top: 5px;
 }
-header ul.ulMain li:hover > span {
+header ul.ulMain li:hover > span.blue-menu-slider {
   height: 2px;
   width: 100%;
   animation: hoverSpanNavMain .4s linear forwards;

@@ -9,12 +9,12 @@ class NavMain extends Component {
       <>
         <nav className="navMain">
             <ul className="ulMain">
-              <li>strona główna <span></span></li>
-              <li>o mnie <span></span></li>
-              <li>pokemorfozy <span></span></li>
-              <li>oferta <span></span></li>
-              <li>blog <span></span></li>
-              <li>kontakt <span></span></li>
+              <li>strona główna <span className="blue-menu-slider"></span></li>
+              <li>o mnie <span className="blue-menu-slider"></span></li>
+              <li>pokemorfozy <span className="blue-menu-slider"></span></li>
+              <li>oferta <span className="blue-menu-slider"></span></li>
+              <li>blog <span className="blue-menu-slider"></span></li>
+              <li>kontakt <span className="blue-menu-slider"></span></li>
            </ul>
          </nav>
       </>
