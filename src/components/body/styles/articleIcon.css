@@ -47,6 +47,7 @@ div.articleIcon div.textContainer span.more {
   align-items: center;
   bottom: -20%;
   transition: .3s;
+  background-color: var(--blue);
 }
 div.articleIcon div.textContainer span.more h3 {
   flex-basis: 20%;

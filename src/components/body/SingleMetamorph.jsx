@@ -27,7 +27,7 @@ const SingleMetamorph = (props) =>  {
           <div className="metamorph-singlestat-container">
             <FontAwesomeIcon icon={faWeight} className="metamorph-staticon"/> 
             <h2 className="metamorph-stat">
-              {weight} 
+              {weight} kg
             </h2>
           </div>
           <div className="metamorph-singlestat-container">
