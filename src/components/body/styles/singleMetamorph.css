@@ -1,10 +1,11 @@
 div.headingContainer div.metamorphContainer {
+  position: relative;
   height: 450px;
-  width: 700px;
+  width: 600px;
   display: grid;
-  grid-template-columns: 30% 30% 1fr;
+  grid-template-columns: 175px 175px 250px;
   grid-template-rows: 300px 150px;
-  margin: 40px 40px;
+  margin: 0px 40px;
   box-shadow: 1px 0px 12px 2px rgba(118,124,125,1);;
 }
 div.metamorph-singlestat-container {
@@ -20,7 +21,7 @@ div.before-sign, div.after-sign {
   align-items: center;
   justify-content: center;
   height: 50px;
-  width: 50%;
+  width: 60%;
   bottom: -15px;
   color: white;
 }
@@ -51,19 +52,20 @@ div.after-sign h2 {
 
 h2.metamorph-name {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 20px;
   border-bottom: 2px solid rgb(0, 237, 255);
   margin-bottom: 20px;
 }
 
 h2.metamorph-stat {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   padding-left: 20px
 }
 
 span.metamorph-trening-stat {
   display: block;
+  font-size: 0.8rem;
   width: 100%;
   padding: 0px 20px;
 }

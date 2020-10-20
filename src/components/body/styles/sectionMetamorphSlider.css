@@ -1,0 +1,41 @@
+
+
+
+div.metamorph-slider-container {
+  width: 70%;
+  margin: 15px auto;
+  margin-bottom: 40px;
+}
+
+div.metamorph-slider {
+  display: flex;
+  transition: .4s ease;
+}
+
+div.button-blur-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 52%;
+  z-index: 1;
+  justify-content: space-between;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%,rgba(0,0,0,0) 12%,rgba(0,0,0,0) 88%, rgba(252,252,252,1) 98%, rgba(252,252,252,1) 100%);
+}
+
+button.slider-buttons {
+  width: 8%;
+  background-color: transparent;
+  border: none;
+  color: rgb(97, 97, 97);
+
+}
+
+button.slider-buttons:hover:enabled {
+  font-size: 1.1rem;
+  transition: .2s ease;
+  color: rgb(37, 37, 37);
+}
+
+button.slider-buttons:focus {
+  outline: none;
+}
