@@ -1,14 +1,12 @@
-
-
-
 div.metamorph-slider-container {
-  width: 70%;
+  width: 100%;
   margin: 15px auto;
   margin-bottom: 40px;
 }
 
 div.metamorph-slider {
   display: flex;
+  width: 300vw;
   transition: .4s ease;
 }
 
@@ -38,4 +36,58 @@ button.slider-buttons:hover:enabled {
 
 button.slider-buttons:focus {
   outline: none;
+}
+
+
+@media (max-width: 1600px) {
+  button.slider-buttons {
+    width: 5%;
+  }
+  div.button-blur-container {
+    height: 550px;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%,rgba(0,0,0,0) 6%,rgba(0,0,0,0) 88%, rgba(252,252,252,1) 98%, rgba(252,252,252,1) 100%);
+
+  }
+
+  div.metamorph-slider-container {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  div.metamorph-slider {
+    width: 300vw;
+  }
+}
+
+@media (max-width: 1025px) {
+  button.slider-buttons {
+    width: 5%;
+  }
+  div.button-blur-container {
+    background: transparent;
+    height: 550px;
+  }
+
+  div.metamorph-slider-container {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  div.metamorph-slider {
+    width: 600vw;
+  }
+}
+
+@media (max-width: 625px) {
+  button.slider-buttons {
+    width: 5%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  button.slider-buttons {
+    width: 5%;
+  }
+
+
+
 }

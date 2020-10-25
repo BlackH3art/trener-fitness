@@ -16,8 +16,11 @@ const SingleMetamorph = (props) =>  {
         <div className="beforeContainer" style={{ backgroundImage: `url(${before})` }}> <div className="before-sign"> <h2>PRZED</h2></div> </div>
         <div className="afterContainer" style={{ backgroundImage: `url(${after})` }}> <div className="after-sign"> <h2>PO</h2></div> </div>
         
-        <div className="morphStats">
+        <div className="metamorph-name-container">
           <h2 className="metamorph-name"> {name} </h2>
+        </div>
+
+        <div className="staticon-container">
           <div className="metamorph-singlestat-container">
             <FontAwesomeIcon icon={faClock} className="metamorph-staticon"/> 
             <h2 className="metamorph-stat">
@@ -30,7 +33,7 @@ const SingleMetamorph = (props) =>  {
               {weight} kg
             </h2>
           </div>
-          <div className="metamorph-singlestat-container">
+          <div className="metamorph-singlestat-container whole-grid-col">
             <FontAwesomeIcon icon={faDumbbell} className="metamorph-staticon"/> 
             <div>
               <span className="metamorph-trening-stat"> RODZAJ TRENINGU:</span>
@@ -38,9 +41,9 @@ const SingleMetamorph = (props) =>  {
                 {training.toUpperCase()}
               </h2>
             </div>
-
           </div>
         </div>
+
         <div className="descriptionContainer">
           <div>
             <h2><span className="metamorph-description1"> OPIS </span> <span className="metamorph-description2"> WSPÓŁPRACY </span></h2>
@@ -49,6 +52,7 @@ const SingleMetamorph = (props) =>  {
             </p>
           </div>
         </div>
+        
       </div>
     </>
   );

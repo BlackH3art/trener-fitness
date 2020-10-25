@@ -1,12 +1,16 @@
 div.headingContainer div.metamorphContainer {
   position: relative;
   height: 450px;
-  width: 600px;
+  width: 40vw;
   display: grid;
-  grid-template-columns: 175px 175px 250px;
-  grid-template-rows: 300px 150px;
-  margin: 0px 40px;
-  box-shadow: 1px 0px 12px 2px rgba(118,124,125,1);;
+  grid-template-columns: 30% 30% 40%;
+  grid-template-rows: 100px 200px 150px;
+  grid-template-areas: 
+  "before-img after-img name"
+  "before-img after-img stats"
+  "description description description";
+  margin: 0 0 0 5vw;
+  box-shadow: 1px 0px 12px 2px rgba(118,124,125,1);
 }
 div.metamorph-singlestat-container {
   display: flex;
@@ -92,6 +96,7 @@ div.beforeContainer, div.afterContainer {
   background-size: cover;
 }
 
+
 div.metamorphContainer div.morphStats {
   background-color: rgb(56, 56, 56);
   color: white;
@@ -111,4 +116,119 @@ div.descriptionContainer div {
 
 div.descriptionContainer div p {
   margin-top: 8px;
+}
+
+
+
+div.metamorph-name-container {
+  grid-area: name;
+}
+div.beforeContainer{
+  grid-area: before-img;
+}
+div.afterContainer {
+  grid-area: after-img;
+}
+div.staticon-container {
+  grid-area: stats;
+}
+div.descriptionContainer{
+  grid-area: description;
+}
+
+
+@media (max-width: 1600px) {
+  div.headingContainer div.metamorphContainer {
+    position: relative;
+    height: 420px;
+    width: 40vw;
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 80px 170px 170px;
+    grid-template-areas: 
+    "before-img after-img name"
+    "before-img after-img stats"
+    "description description description";
+    margin: 0px 0px 0px 5vw;
+    box-shadow: 1px 0px 12px 2px rgba(118,124,125,1);
+  }
+}
+
+@media (max-width: 1025px) {
+  div.headingContainer div.metamorphContainer {
+    width: 600px;
+    height: 575px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 75px 250px 100px 150px;
+    grid-template-areas: 
+    "name name"
+    "before-img after-img"
+    "stats stats"
+    "description description";
+    background-color: rgb(56, 56, 56);
+    margin: 0 auto;
+
+  }
+
+  div.staticon-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: flex-end;
+    grid-template-rows: 50px 50px;
+    width: 100%;
+    height: 100%;
+    color: #ffffff
+  }
+  div.whole-grid-col {
+    display: flex;
+    justify-content: center;
+    grid-column: 1/3;
+  }
+  div.metamorph-singlestat-container{
+    display: flex;
+    justify-content: center;
+  }
+  div.before-sign h2, div.after-sign h2 {
+    font-size: 1.1rem;
+  }
+  div.before-sign, div.after-sign {
+    height: 40px;
+    width: 35%;
+    bottom: -10px;
+  }
+
+  div.morphStats {
+    width: 100%;
+  }
+}
+
+@media (max-width: 625px) {
+  div.headingContainer div.metamorphContainer {
+    width: 90vw;
+    height: 575px;
+    grid-template-rows: 75px 200px 100px 200px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  div.before-sign h2, div.after-sign h2 {
+    font-size: 1.0rem;
+  }
+
+  div.before-sign, div.after-sign {
+    height: 33px;
+    width: 50%;
+    bottom: -5px;
+  }
+  span.metamorph-description1 {
+    font-size: 1.2rem;
+  }
+  span.metamorph-description2 {
+    font-size: 1.5rem;
+  }
+  div.descriptionContainer div p {
+    font-size: 0.9rem;
+  }
 }

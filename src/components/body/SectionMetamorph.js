@@ -10,28 +10,57 @@ import './styles/sectionMetamorphSlider.css';
 export const SectionMetamorph = () => {
 
   const [metamorphoses, setMetamorphoses] = useState([])
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
   const [sliderPosition, setSliderPosition] = useState(0)
+  const [maxPosition, setMaxPosition] = useState(0)
 
   useEffect(
     () => {
       setMetamorphoses(metamorphosesData)
-    }, []
+      if(windowSize <= 1024) {
+        setMaxPosition(500)
+      } else {
+        setMaxPosition(180)
+      }
+    }, [windowSize]
   )
 
+  useEffect(() => {
+
+    const handleResize = () => {
+      setWindowSize(window.innerWidth)
+    }
+
+    window.addEventListener("resize", handleResize)
+
+  }, [])
+
   const sliderStyleObject = {
-    transform: `translateX(-${sliderPosition}px)`
+    transform: `translateX(-${sliderPosition}vw)`
   }
 
   const handleNextClick = () => {
-    setSliderPosition(prevState => prevState + 1360)
+    if(windowSize >= 1025) {
+      setSliderPosition(prevState => prevState + 90);
+      return;
+    } else {
+      setSliderPosition(prevState => prevState + 100);
+      return;
+    }
   }
   
   const handlePrevClick = () => {
-    setSliderPosition(prevState => prevState - 1360)
+    if(windowSize >= 1025) {
+      setSliderPosition(prevState => prevState - 90);
+      return;
+    } else {
+      setSliderPosition(prevState => prevState - 100);
+      return;
+    }
   }
 
   const isFirstElement = sliderPosition === 0 ? true : false;
-  const isLastElement = sliderPosition === 2720 ? true : false;
+  const isLastElement = sliderPosition === maxPosition ? true : false;
 
 
   const metamorphosesComponents = metamorphoses.map((item, index) => (
@@ -51,6 +80,7 @@ export const SectionMetamorph = () => {
   return ( 
     <>
       <div className="headingContainer">
+            
         <h1>Metamorfoy podopiecznych</h1>
         <div className="button-blur-container">
           <button onClick={handlePrevClick} className="slider-buttons" disabled={isFirstElement}><FontAwesomeIcon size="3x" icon={faChevronLeft}/></button>

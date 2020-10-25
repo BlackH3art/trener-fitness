@@ -19,7 +19,7 @@ const Body = () => {
         <MainPage />
         <SectionComponent />
         <SectionTraining />
-        <SectionAbout />
+        {/* <SectionAbout /> */}
         <SectionMetamorph />
         <Footer />
       </div>
