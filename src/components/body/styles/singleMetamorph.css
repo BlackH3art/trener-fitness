@@ -29,18 +29,15 @@ div.before-sign, div.after-sign {
   bottom: -15px;
   color: white;
 }
-
 div.before-sign {
   background-color: red;
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 25% 100%, 0 50%);
   right: 0;
 }
-
 div.after-sign {
   background-color: rgb(86, 235, 74);
   clip-path: polygon(75% 0, 0 0, 0 100%, 75% 100%, 100% 50%);
 }
-
 div.before-sign h2, div.after-sign h2 {
   font-size: 1.3rem;
   display: block;
@@ -61,19 +58,16 @@ h2.metamorph-name {
   border-bottom: 2px solid rgb(0, 237, 255);
   margin-bottom: 20px;
 }
-
 h2.metamorph-stat {
   font-size: 1.1rem;
   padding-left: 20px
 }
-
 span.metamorph-trening-stat {
   display: block;
   font-size: 0.8rem;
   width: 100%;
   padding: 0px 20px;
 }
-
 span.metamorph-description1 {
   font-size: 1.5rem;
   font-weight: 800;
@@ -86,8 +80,6 @@ span.metamorph-description2 {
 .metamorph-staticon {
   font-size: 2rem;
 }
-
-/* children of main grid */
 
 div.beforeContainer, div.afterContainer {
   position: relative;

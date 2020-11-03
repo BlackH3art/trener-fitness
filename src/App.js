@@ -1,20 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from './components/header/Header';
 import Body from './components/body/Body';
+import CooperateForm from './components/cooperate form/CooperateForm.jsx'
+import Footer from './components/footer/Footer.jsx'
+import Header from './components/header/Header';
 
 
-class App extends Component {
+
+const App = () => {
   
-  render() { 
-    return ( 
-      <>
-        <Header />
-        <Body />
-      </>
-     );
-  }
+
+  return ( 
+    <>
+      <Header />
+      <Body />
+      <CooperateForm />
+      <Footer />
+    </>
+    );
+
 }
  
 

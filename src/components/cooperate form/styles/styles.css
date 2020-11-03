@@ -1,0 +1,40 @@
+div.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+
+/* *************************** FORM HEADER STYLES ********************* */
+
+div.form-header {
+  display: flex;
+}
+
+div.form-header-element {
+  background-color: yellow;
+  flex-grow: 1;
+  border: solid 2px black;
+  text-align: center;
+}
+
+
+/* *************************** FORM STEP STYLES ********************* */
+
+div.form-steps-controler {
+  display: flex;
+}
+
+div.form-step-container {
+  background-color: darkgrey;
+}
+
+div.input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.input-container label {
+  text-align: right;
+  padding-right: 10px;
+}

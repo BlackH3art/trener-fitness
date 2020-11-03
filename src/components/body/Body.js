@@ -6,7 +6,6 @@ import SectionComponent from './SectionComponent';
 import SectionTraining from './SectionTraining';
 import SectionAbout from './SectionAbout';
 import SectionMetamorph from './SectionMetamorph';
-import Footer from '../footer/Footer.jsx';
 
 
 
@@ -19,9 +18,8 @@ const Body = () => {
         <MainPage />
         <SectionComponent />
         <SectionTraining />
-        {/* <SectionAbout /> */}
+        <SectionAbout />
         <SectionMetamorph />
-        <Footer />
       </div>
 
     </>
