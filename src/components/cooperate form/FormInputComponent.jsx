@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormInputComponent = ({name, label, placeholder}) => {
+const FormInputComponent = ({ changeCallback, name, label, placeholder}) => {
 
 
   return ( 
@@ -9,7 +9,7 @@ const FormInputComponent = ({name, label, placeholder}) => {
         <label htmlFor={name}>
           {label}
         </label>
-        <input name={name} type="text" placeholder={placeholder}/>
+        <input name={name} type="text" placeholder={placeholder} onChange={changeCallback}/>
       </div>
     </>
    );
