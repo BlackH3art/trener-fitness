@@ -3,11 +3,13 @@
   --blue: #00e5ff;
   --p-color: #bfbfbf;
   --button-color: #ff7b00;
-
+  --darker-green: #9FD754;
+  --bgc-black: #2A2A2A;
 }
 
 div.main {
   position: relative;
+  display: flex;
   width: 100%;
   height: 100vh;
   background-image: url("bg-main.jpg");
@@ -16,22 +18,58 @@ div.main {
   background-position: center 10%;
   color: white;
   font-family: 'Mulish';
+  align-items: flex-end;
+  justify-content: center;
 }
 
 div.mainContainer {
   position: absolute;
   height: 450px;
   width: 720px;
-  top: 30%;
-  left: 50%;
-  background-color: rgba(0,0,0,0.75);
-  border: 12.1px solid;
-  border-image-slice: 1;
-  border-width: 12.1px;
-  border-image-source: linear-gradient(to left, var(--green), var(--blue));
   text-align: center;
-  
+  margin-bottom: 20px;
 }
+
+div.mainContainer h2.title-trener {
+  letter-spacing: 4px;
+}
+
+div.mainContainer h1.title-name {
+  color: var(--darker-green);
+}
+
+div.mainContainer span.title-text {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+div.action-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 50px;
+  padding: 30px;
+  width: 100%;
+  background-color: var(--bgc-black);
+}
+
+h2.action-call {
+  color: var(--darker-green);
+  margin-bottom: 5px;
+}
+
+span.action-call-text {
+  font-weight: 200;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* button.button-action {
+
+} */
+
+
 
 div.mainContainer h1 {
   text-transform: uppercase;
@@ -140,11 +178,15 @@ div.mainContainer button {
 
 @media (max-width: 460px) {
   div.mainContainer {
-    height: 300px;
-    width: 300px;
-    top: 40%;
-    left: 50%;
+    top: 50%;
+    height: 150px;
+    width: 100%;
     transform: translateX(-50%);
+    /* margin: 0 0; */
+  }
+
+  div.main {
+    background-position: 20% 100%;
   }
   div.mainContainer h1 {
     font-size: 2em;
@@ -158,6 +200,36 @@ div.mainContainer button {
     font-size: 1.0em;
     margin-top: 2.0em;
   }
+
+  div.mainContainer h2.title-trener {
+    font-size: 1rem;
+  }
+  
+  div.mainContainer h1.title-name {
+    font-size: 1.8rem;
+  }
+  
+  div.mainContainer span.title-text {
+    font-size: 1rem;
+    /* margin-bottom: 5px; */
+  }
+  
+  div.action-container {
+    height: 175px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h2.action-call {
+    font-size: 1.3rem;
+  }
+  
+  span.action-call-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
   
 
 }
