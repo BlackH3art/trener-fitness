@@ -37,7 +37,9 @@ div.social-buttons-box ul li:nth-child(2) {
   background-color: #DD2A7B;
   width: 30%;
 }
-
+li.facebook-link a, li.insta-link a {
+  color: white;
+}
 li img {
   height: 80px;
 }

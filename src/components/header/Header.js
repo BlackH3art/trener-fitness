@@ -5,7 +5,7 @@ import React from 'react';
 import logo from '../img/logo2-white-other.png';
 
 // import NavSocial from './NavSocial';
-import NavMain from './NavMain';
+import NavMain from './NavMain.jsx';
 
 const Header = () => {
 
