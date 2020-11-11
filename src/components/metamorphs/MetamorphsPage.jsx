@@ -1,12 +1,32 @@
 import React from 'react';
 
+import MetamorphPageComponent from './MetamorphPageComponent.jsx';
+
 import './styles/metamorphspage.css';
+import { metamorphosesPageData } from '../body/imagesData';
 
 const MetamorphsPage = () => {
+
+  const metamorphosesComponents = metamorphosesPageData.map((item, index) => (
+    <MetamorphPageComponent 
+      key={index}
+      before={item.before}
+      after={item.after}
+      name={item.name}
+      timePeriod={item.timePeriod}
+      weight={item.weight}
+      training={item.training}
+      description={item.description}
+    />
+
+  ))
+
   return ( 
     <>
       <div className="metamorphspage-container">
-        addsas
+        <div className="metamorphs-components-container">
+          {metamorphosesComponents}
+        </div>
       </div>
     </>
   );

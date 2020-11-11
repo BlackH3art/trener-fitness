@@ -1,5 +1,149 @@
 div.metamorphspage-container {
-  height: 80vh;
+  display: flex;
   width: 100%;
-  background-color: red;
+  justify-content: center;
+
+}
+
+div.metamorphs-components-container {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 50px;
+  width: 70%;
+}
+
+div.metamorph-page-component {
+  width: 100%;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  grid-template-rows: 100px 200px 150px;
+  grid-template-areas: 
+  "before after name"
+  "before after stats"
+  "description description description";
+  box-shadow: 1px 0px 12px 2px rgba(118,124,125,1);
+}
+
+div.before-bg {
+  grid-area: before;
+}
+
+div.after-bg {
+  grid-area: after;
+}
+
+div.before-bg, div.after-bg {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.icons-stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  grid-area: stats;
+  width: 100%;
+  height: 100%;
+}
+
+div.icons-stats {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.single-staticon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+h2.icon-stat-title {
+  font-size: 1.5rem;
+}
+div.grey-description {
+  background-color: rgb(235, 235, 235);
+  grid-area: description;
+  
+}
+
+
+
+@media (max-width: 1600px) {
+  div.metamorphs-components-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1025px) {
+  div.metamorphs-components-container {
+    width: 70%;
+    grid-template-columns: 1fr
+  }
+  .single-staticon {
+    font-size: 1.8rem;
+  }
+  h2.icon-stat-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  div.metamorphs-components-container {
+    width: 95%;
+    grid-template-columns: 1fr
+  }
+  div.metamorph-page-component{
+    grid-template-rows: 75px 175px 200px;
+  }
+  .training-type-span {
+    font-size: 0.8rem;
+  }
+  .single-staticon {
+    font-size: 1.5rem;
+  }
+  h2.icon-stat-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+  div.metamorph-page-component {
+    height: 525px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75px 200px 100px 150px;
+    grid-template-areas: 
+    "name name"
+    "before after"
+    "stats stats"
+    "description description";
+  }
+  div.icons-stats-container {
+    flex-direction: row;
+  }
+  .single-staticon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+  }
+  h2.icon-stat-title {
+    font-size: 1.3rem;
+  }
+  div.icons-stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.icons-stats:nth-child(3) {
+    grid-column: 1/3;
+  }
+
+  div.metamorph-page-component div.descriptionContainer div {
+    margin-top: 5px;
+  }
+
+
 }

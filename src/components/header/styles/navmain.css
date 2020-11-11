@@ -48,6 +48,11 @@ header ul.ulMain li:hover > span.blue-menu-slider {
   width: 100%;
   animation: hoverSpanNavMain .4s linear forwards;
 }
+ul.ulMain a {
+  text-decoration: none;
+  outline: none;
+  color: #d9d9d9;
+}
 
 @keyframes hoverSpanNavMain {
   0% {transform: translateX(-100%);}

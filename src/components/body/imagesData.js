@@ -4,6 +4,8 @@ import before3 from './images/before/before3.jpg';
 import before4 from './images/before/before4.jpg';
 import before5 from './images/before/before5.jpg';
 import before6 from './images/before/before6.jpg';
+import before7 from './images/before/before7.jpg';
+import before8 from './images/before/before8.jpg';
 
 import after1 from './images/after/after1.jpg';
 import after2 from './images/after/after2.jpg';
@@ -11,6 +13,8 @@ import after3 from './images/after/after3.jpg';
 import after4 from './images/after/after4.jpg';
 import after5 from './images/after/after5.jpg';
 import after6 from './images/after/after6.jpg';
+import after7 from './images/after/after7.jpg';
+import after8 from './images/after/after8.jpg';
 
 
 export const metamorphosesData = [
@@ -67,5 +71,27 @@ export const metamorphosesData = [
     weight: "-102kg",
     training: "Hula Hop",
     description: "Nie ma nad czym się zastanawiać, Zuzia to prawdziwa bestia! Hulahopem wycyzniała takie akrobacje, że nawet Chuck'owi NOrris'owi nim wybiła zęby!"
+  },
+]
+
+export const metamorphosesPageData = [
+  {
+    before: before7,
+    after: after7,
+    name: "Zbysia",
+    timePeriod: "12",
+    weight: "-12kg",
+    training: "Rolowanie",
+    description: "asdf"
+  },
+  ...metamorphosesData,
+  {
+    before: before8,
+    after: after8,
+    name: "Lolita",
+    timePeriod: "15",
+    weight: "-666kg",
+    training: "Turlanie",
+    description: "afsddddddddddddddddddddd"
   },
 ]

@@ -31,6 +31,9 @@ div.before-sign, div.after-sign {
 }
 div.before-sign {
   background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 25% 100%, 0 50%);
   right: 0;
 }
@@ -40,8 +43,11 @@ div.after-sign {
 }
 div.before-sign h2, div.after-sign h2 {
   font-size: 1.3rem;
+  font-weight: 800;
   display: block;
   position: absolute;
+  margin-bottom: 0;
+
 }
 div.before-sign h2 {
   right: 10px;
