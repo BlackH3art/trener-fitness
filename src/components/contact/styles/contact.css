@@ -28,14 +28,18 @@ div.controling-buttons-container{
 
 }
 
-div.first-option-div, div.second-option-div {
+div.first-option-div, div.second-option-div, div.first-option-div-reverse, div.second-option-div-reverse {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
   width: 50%;
   color: #797979;
+  outline: 0;
+}
 
+div.first-option-div:focus {
+  border: none;
 }
 
 .form-title {
@@ -48,10 +52,25 @@ div.first-option-div {
 
 }
 
+div.first-option-div-reverse {
+  border-radius: 0 55px 0 0;
+  background-color: var(--darker-green);
+  color: white;
+}
+
 div.second-option-div{
   border-radius: 55px 0 0 0;
+  color: white;
   background-color: var(--darker-green)
 
 }
+div.second-option-div-reverse {
+  border-radius: 0 0px 0 55px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* div.first-option-div-reverse h3.form-title {
+  zwiększenie tytułu przy aktywacji?
+} */
 
 /* ***************************************   FORM CONTAINER   ********************************** */

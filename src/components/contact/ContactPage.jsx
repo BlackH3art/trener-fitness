@@ -8,12 +8,24 @@ import './styles/contact.css';
 const ContactPage = () => {
 
   const [ cooperateActive, setCooperateActive ] = useState(false);
-  const [ contactActive, setContactActive ] = useState(true);
+  const [ contactFormActive, setContactFormActive ] = useState(true);
 
+  const handleActiveContactForm = () => {
+    setContactFormActive(true);
+    setCooperateActive(false)
+  }
+  const handleActiveCooperateForm = () => {
+    setCooperateActive(true);
+    setContactFormActive(false);
+  }
 
+  const handleKeyPress = () => {
 
-  const cooperateForm = cooperateActive ? <CooperateForm /> : null;
-  const contactForm = contactActive ? <ContactForm /> : null;
+  }
+
+  const reverse = cooperateActive ? "-reverse" : "";
+
+  const activeForm = cooperateActive && !contactFormActive? <CooperateForm /> : <ContactForm />;
 
   return ( 
     <>
@@ -24,13 +36,12 @@ const ContactPage = () => {
         
         <div className="forms-controler-container">
           <div className="controling-buttons-container">
-            <div className="first-option-div"  > <h3 className="form-title">zostań podopiecznym</h3></div>
-            <div className="second-option-div"  > <h3 className="form-title">skontaktuj się</h3></div>
+            <div className={`first-option-div${reverse}`} tabIndex={0} onKeyPress={handleKeyPress} onClick={handleActiveCooperateForm} role="button"> <h3 className="form-title">zostań podopiecnym</h3></div>
+            <div className={`second-option-div${reverse}`} tabIndex={0} onKeyPress={handleKeyPress} onClick={handleActiveContactForm} role="button"> <h3 className="form-title">skontaktuj się ze mną</h3></div>
           </div>
 
           <div className="form-slider-container">
-            {cooperateForm}
-            {contactForm}
+            {activeForm}
           </div>
 
         </div>

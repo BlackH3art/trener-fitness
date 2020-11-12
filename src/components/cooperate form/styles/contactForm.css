@@ -1,9 +1,18 @@
 div.contactform-inputs-container {
   display: flex;
-  background-color: blue;
 }
 
 textarea.form-input {
-  width: 500px;
+  width: 100%;
   resize: none;
+}
+
+div.contactform-textarea-container {
+  display: grid;
+  grid-template-columns: 22% 78%;
+}
+div.contactform-textarea-container label {
+  display: block;
+  text-align: right;
+  padding: 10px 15px;
 }
