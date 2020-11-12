@@ -21,8 +21,8 @@
     "eslint-plugin-react": "^7.20.3",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -33,7 +33,9 @@
     "boo": "^2.0.0",
     "bootstrap": "^4.5.3",
     "for": "^0.1.0",
+    "framer-motion": "^2.9.4",
     "re": "^0.1.4",
+    "rea": "0.0.1",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",

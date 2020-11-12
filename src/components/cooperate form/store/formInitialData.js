@@ -4,12 +4,12 @@ export const formInitialData = {
     inputs: [
       {
         names: ['name', 'surname', 'email'],
-        labels: ['Imię z Reduxa', 'Nazwisko', 'email'],
+        labels: ['Imię', 'Nazwisko', 'email'],
         placeholders: ['imię', 'nazwisko', 'email']
       },
       {
         names: ['height', 'weight'],
-        labels: ['Wzrost z Reduxa', 'waga'],
+        labels: ['Wzrost', 'waga'],
         placeholders: ['wzrost', 'waga']
       },
       {

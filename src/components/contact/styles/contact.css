@@ -1,5 +1,57 @@
 div.contactpage-container {
   height: 80vh;
   width: 100%;
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
+
+div.controling-buttons-container {
+  background: linear-gradient(to top, var(--darker-green) 50%, rgb(255, 255, 255) 50%);
+  border-bottom: 1px solid var(--darker-green);
+
+  
+}
+
+div.forms-controler-container {
+  border: 2px solid var(--darker-green);
+  border-top: none;
+  width: 50vw;
+  border-radius: 0 0px 55px 55px;
+  min-height: 50%;
+
+}
+
+div.controling-buttons-container{
+  display: flex;
+
+}
+
+div.first-option-div, div.second-option-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 50%;
+  color: #797979;
+
+}
+
+.form-title {
+  font-size: 1.3rem;
+}
+
+div.first-option-div {
+  border-radius: 0 0px 55px 0;
+  background-color: rgb(255, 255, 255);
+
+}
+
+div.second-option-div{
+  border-radius: 55px 0 0 0;
+  background-color: var(--darker-green)
+
+}
+
+/* ***************************************   FORM CONTAINER   ********************************** */

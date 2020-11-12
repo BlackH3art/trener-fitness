@@ -71,20 +71,15 @@ footer {
   justify-content: center;
   width: 100%;
   height: 270px;
-  /* background: linear-gradient(90deg, rgba(0,229,255,1) 0%, rgba(221,42,123,1) 50%, rgba(21,255,0,1) 100%); */
   box-shadow: 1px -2px 10px 1px rgba(0,0,0,0.3);
   background-color: rgb(45, 45, 45);
 }
 
 div.style-container {
-  /* border-top-left-radius: 50%;
-  border-top-right-radius: 50%; */
   display: flex;
   justify-content: center;
   width: 100%;
   height: 200px;
-  /* background: linear-gradient(180deg, transparent -100%, rgba(255,255,255,1) 50%  transparent 200% ); */
- 
 }
 
 div.footer-detail-container {
@@ -96,6 +91,10 @@ div.footer-detail-container {
   font-weight: 200;
   color: rgb(165, 165, 165);
 
+}
+
+a {
+  color: rgb(165, 165, 165);;
 }
 
 div.footer-contact-details {
@@ -128,16 +127,16 @@ div.footer-navigation {
   margin: 5px 10px;
 }
 div.footer-contact-details p:hover > .footer-mobile {
-  color: var(--green);
+  color: var(--darker-green);
 }
 div.footer-contact-details p:hover > .footer-mail {
-  color: var(--blue);
+  color: var(--darker-green);
 }
 .footer-mobile:hover {
-  color: var(--green);
+  color: var(--darker-green);
 }
 .footer-mail:hover {
-  color: var(--blue);
+  color: var(--darker-green);
 }
 .footer-face:hover {
   color: #3f5ca0;
@@ -159,26 +158,26 @@ div.footer-contact-details p:hover > .footer-mail {
   position: relative;
   transition: .2s;
 }
-li.nav-li-active::before, .footer-nav ul li:hover::before {
+a.nav-li-active li::before, .footer-nav ul li:hover::before {
   content: '';
   display: block;
   position: absolute;
   left: -10px;
   height: 18px;
   width: 5px;
-  background-color: var(--blue);
+  background-color: var(--darker-green);
 }
 .footer-nav ul li:hover::before {
   width: 2px;
 }
-li.nav-li-active {
-  color: var(--blue);
+a.nav-li-active {
+  color: var(--darker-green);
   font-weight: 800;
-  text-decoration: underline var(--blue);
+  text-decoration: underline var(--darker-green);
 }
 .footer-nav ul li:hover {
-  color: var(--blue);
-  text-decoration: underline var(--blue);
+  color: var(--darker-green);
+  text-decoration: underline var(--darker-green);
   cursor: pointer;
 }
 

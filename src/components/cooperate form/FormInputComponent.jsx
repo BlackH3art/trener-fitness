@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles/inputComponent.css';
+
 const FormInputComponent = ({ changeCallback, name, label, placeholder}) => {
 
 
@@ -9,7 +11,7 @@ const FormInputComponent = ({ changeCallback, name, label, placeholder}) => {
         <label htmlFor={name}>
           {label}
         </label>
-        <input name={name} type="text" placeholder={placeholder} onChange={changeCallback}/>
+        <input className="form-input" name={name} type="text" placeholder={placeholder} onChange={changeCallback}/>
       </div>
     </>
    );

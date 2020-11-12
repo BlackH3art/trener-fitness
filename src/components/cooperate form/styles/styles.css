@@ -1,41 +1,80 @@
-/* div.form-container {
-  margin-top: 200px;
+/* :root {
+  --red: rgba(241,39,17,1);
+  --orange: rgba(245,175,25,1);
+} */
+
+div.form-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: grey;
-} */
+  padding-top: 25px;
+}
 
 /* *************************** FORM HEADER STYLES ********************* */
-
-/* div.form-header {
+div.header-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.form-header {
+  display: flex;
+  width: 70%;
+  margin-bottom: 50px;
+  justify-content: space-between;
 }
 
 div.form-header-element {
-  background-color: yellow;
-  flex-grow: 1;
-  border: solid 2px black;
+  width: 30%;
+  border: solid 2px var(--darker-green);
   text-align: center;
-} */
+  transform: skew(-15deg);
+  color: #797979;
+  transition: .4s;
+}
+
+div.active {
+  color: #ffffff;
+  border: none;
+  transform: skew(-15deg) scale(1.2);
+  /* background: linear-gradient(135deg, rgba(241,39,17,1) 0%, rgba(245,175,25,1) 100%); */
+  background-color: var(--darker-green);
+
+}
+
+div.header-elements-container {
+  display: flex;
+  align-items: center;
+}
 
 
 /* *************************** FORM STEP STYLES ********************* */
 
-/* div.form-steps-controler {
+div.form-steps-controler {
+  position: relative;
+  height: 200px;
+  width: 500px;
   display: flex;
+  border-radius: 20px;
+  /* background: linear-gradient(135deg, rgba(241,39,17,1) 0%, rgba(245,175,25,1) 100%); */
+  overflow: hidden;
+  
 }
 
 div.form-step-container {
-  background-color: darkgrey;
+  padding: 20px 30px;
+}
+div.animating-container {
+  position: absolute;
 }
 
-div.input-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+div.button-container {
+  display: flex;
+  justify-content: center;
 }
 
-div.input-container label {
-  text-align: right;
-  padding-right: 10px;
-} */
+div.button-container button {
+  margin: 20px 5px;
+}
+
+

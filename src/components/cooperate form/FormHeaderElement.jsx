@@ -1,10 +1,12 @@
 import React from 'react';
 
-const FormHeaderElement = ({title}) => {
+const FormHeaderElement = ({ title, isActive }) => {
   
+  const styles = `form-header-element ${isActive ? 'active' : ''}`
+
   return ( 
     <>
-      <div className="form-header-element">
+      <div className={styles}>
         <h1> {title} </h1>
       </div>
     </>

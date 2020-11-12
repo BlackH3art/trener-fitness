@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faMobileAlt, faAt } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom'
 
 import facebookLogoFont from '../../img/Facebook-Logo-Font.jpg';
 import instagramLogoFont from '../../img/Instagram-Logo-Font.jpg';
@@ -24,7 +25,7 @@ const Footer = () => {
       </div>
       <footer>
         <div className="style-container">
-           <div className="footer-detail-container">
+          <div className="footer-detail-container">
 
               <div className="footer-contact-details">
                 <img src={logo} alt="ssssssss"/>
@@ -40,12 +41,12 @@ const Footer = () => {
                 <nav className="footer-nav">
                   <h4>Nawigacja</h4>
                   <ul className="footer-nav-ul">
-                    <li>Strona główna </li>
+                    <NavLink to="/" activeClassName="nav-li-active" exact={true} ><li>Strona główna </li></NavLink>
                     <li>O mnie </li>
-                    <li className="nav-li-active">Pokemorfozy </li>
+                    <NavLink to="/metamorfozy" activeClassName="nav-li-active" ><li>Pokemorfozy </li></NavLink>
                     <li>Oferta </li>
                     <li >Blog </li>
-                    <li>Kontakt </li>
+                    <NavLink to="/kontakt" activeClassName="nav-li-active" ><li>Kontakt </li></NavLink>
                   </ul>
                 </nav>
               </div>

@@ -24,6 +24,9 @@ const MetamorphsPage = () => {
   return ( 
     <>
       <div className="metamorphspage-container">
+        <div className="page-title-container">
+          <h1 className="action-call">metamorfozy podopiecznych</h1>
+        </div>
         <div className="metamorphs-components-container">
           {metamorphosesComponents}
         </div>
