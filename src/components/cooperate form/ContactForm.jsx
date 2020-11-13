@@ -1,21 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import { Provider } from 'react-redux';
-import formStore from './store';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { updateContactFormData } from './store/actionCreators';
 
 import './styles/contactForm.css';
 
 const ContactForm = () => {
 
-  const handleChange = () => {}
+  const [formContactData, setFormContactData] = useState({})
+
+  const dispatch = useDispatch()
+  const reduxFormContactData = useSelector(state => state.formContactData)
+
+  useEffect(() => {
+    setFormContactData(reduxFormContactData)
+  }, [])
+
+  const handleChange = (e) => {
+    setFormContactData({
+      ...formContactData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch(updateContactFormData(formContactData))
+  }
 
   return ( 
     <>
-      <Provider store={formStore}>
         <div className="App-header">
-
           <div className="form-container">
-            <form>
+            <form onSubmit={handleSubmit}>
 
               <div className="contactform-inputs-container">
                 <div className="input-container">
@@ -41,11 +59,14 @@ const ContactForm = () => {
                 </textarea>
               </div>
 
+              <div className="contactform-button-container">
+                <button type="submit" className="btn btn-primary">wyślij</button>
+              </div>
+
             </form>
           </div>
           
         </div>
-      </Provider>
     </>
    );
 }

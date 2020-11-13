@@ -27,6 +27,12 @@ export const formInitialData = {
     weight: '',
     phone: '',
     date: ''
-  }
+  },
+  formContactData: {
+    name: '',
+    email: '',
+    text: ''
+  },
+  cooperateFormActive: false
 }
 

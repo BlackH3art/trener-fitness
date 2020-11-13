@@ -13,16 +13,15 @@ const MainPage = () => {
 
   return ( 
     <>
-      
-        {/* <Offer />  */}
-        <Main />
-        <SectionComponent />
-        <SectionTraining />
-        <SectionAbout />
-        <SectionMetamorph />
-      
+    
+      <Main />
+      <SectionComponent />
+      <SectionTraining />
+      <SectionAbout />
+      <SectionMetamorph />
+
     </>
-    );
+  );
 }
  
 export default MainPage;

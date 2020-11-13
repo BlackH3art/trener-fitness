@@ -43,7 +43,7 @@ const FormStepsControler = ({ goBackCallback, goNextCallback, stepState, lastSta
 
 
   const initialObj = {
-    x: '100%'
+    x: '150%'
   }
   const activeObj = {
     x: '0%'

@@ -1,4 +1,4 @@
-import { SENDDATA } from './actionCreators';
+import { SENDDATA, SENDMESSAGE, COOPERATELEADBUTTON } from './actionCreators';
 import { formInitialData } from './formInitialData';
 
 export default function formReducer(storeData, action) {
@@ -8,8 +8,20 @@ export default function formReducer(storeData, action) {
     case SENDDATA: 
       return {
         ...storeData,
-        [storeData.formData]: action.payload
+        formData: action.payload
       };
+
+    case SENDMESSAGE:
+      return {
+        ...storeData,
+        formContactData: action.payload,
+      };
+    
+    case COOPERATELEADBUTTON: 
+      return {
+        ...storeData,
+        cooperateFormActive: action.payload
+      }
 
     default:
       return storeData || formInitialData

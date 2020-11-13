@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { cooperateLead } from '../cooperate form/store/actionCreators';
 
 import ContactForm from '../cooperate form/ContactForm.jsx';
 import CooperateForm from '../cooperate form/CooperateForm.jsx';
@@ -7,25 +10,23 @@ import './styles/contact.css';
 
 const ContactPage = () => {
 
-  const [ cooperateActive, setCooperateActive ] = useState(false);
-  const [ contactFormActive, setContactFormActive ] = useState(true);
+  const cooperateFlag = useSelector(state => state.cooperateFormActive);
+  const dispatch = useDispatch();
 
   const handleActiveContactForm = () => {
-    setContactFormActive(true);
-    setCooperateActive(false)
+    dispatch(cooperateLead(false))
   }
   const handleActiveCooperateForm = () => {
-    setCooperateActive(true);
-    setContactFormActive(false);
+    dispatch(cooperateLead(true))
   }
 
   const handleKeyPress = () => {
 
   }
 
-  const reverse = cooperateActive ? "-reverse" : "";
+  const reverse = cooperateFlag ? "-reverse" : "";
 
-  const activeForm = cooperateActive && !contactFormActive? <CooperateForm /> : <ContactForm />;
+  const activeForm = cooperateFlag ? <CooperateForm /> : <ContactForm />;
 
   return ( 
     <>
@@ -43,6 +44,7 @@ const ContactPage = () => {
           <div className="form-slider-container">
             {activeForm}
           </div>
+
 
         </div>
       </div>

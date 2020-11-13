@@ -1,11 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+import { cooperateLead } from '../cooperate form/store/actionCreators';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 
 import './styles/mainpage.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+
 const Main = () => {
+
+  const dispatch = useDispatch();
+  
+  const handleLeadClick = () => {
+    dispatch(cooperateLead(true))
+  }
+
 
   return ( 
     <>
@@ -19,7 +32,7 @@ const Main = () => {
         <div className="action-container">
           <h2 className="action-call">Umów się ze mną!</h2>
           <span className="action-call-text">Pierwsza konsultacja i trening personalny za darmo!</span>
-          <button className="btn btn-primary p-2 button-action">zostań podopiecznym <FontAwesomeIcon icon={faAngleDoubleRight} /> </button>
+          <Link to="/kontakt"><button onClick={handleLeadClick} className="btn btn-primary p-2 button-action">zostań podopiecznym <FontAwesomeIcon icon={faAngleDoubleRight} /> </button></Link>
         </div>
       </div>
     </>

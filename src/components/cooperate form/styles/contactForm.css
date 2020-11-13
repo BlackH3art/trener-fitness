@@ -9,10 +9,17 @@ textarea.form-input {
 
 div.contactform-textarea-container {
   display: grid;
-  grid-template-columns: 22% 78%;
+  grid-template-columns: 100px 1fr;
 }
 div.contactform-textarea-container label {
   display: block;
   text-align: right;
   padding: 10px 15px;
+  width: 100px;
+}
+
+div.contactform-button-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
