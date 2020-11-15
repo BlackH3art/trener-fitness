@@ -42,10 +42,10 @@ const Footer = () => {
                   <h4>Nawigacja</h4>
                   <ul className="footer-nav-ul">
                     <NavLink to="/" activeClassName="nav-li-active" exact={true} ><li>Strona główna </li></NavLink>
-                    <li>O mnie </li>
+                    <NavLink to="/omnie" activeClassName="nav-li-active"><li>O mnie </li></NavLink>
                     <NavLink to="/metamorfozy" activeClassName="nav-li-active" ><li>Pokemorfozy </li></NavLink>
-                    <li>Oferta </li>
-                    <li >Blog </li>
+                    <NavLink to="/oferta" activeClassName="nav-li-active"><li>Oferta </li></NavLink>
+                    <NavLink to="/blog" activeClassName="nav-li-active"><li >Blog </li></NavLink>
                     <NavLink to="/kontakt" activeClassName="nav-li-active" ><li>Kontakt </li></NavLink>
                   </ul>
                 </nav>

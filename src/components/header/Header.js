@@ -1,11 +1,15 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React from 'react';
+import React, { useState } from 'react';
+import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import MobileNav from './MobileNav.jsx';
+import NavMain from './NavMain.jsx';
+
+import './styles/header.css';
 import logo from '../img/logo2-white-other.png';
 
-// import NavSocial from './NavSocial';
-import NavMain from './NavMain.jsx';
 
 const Header = () => {
 
@@ -23,13 +27,24 @@ const Header = () => {
     paddingTop: "5px"
   }
 
+  const [activeMobileNav, setActiveMobileNav] = useState(false)
+
+
+const handleClick = () => {
+  setActiveMobileNav(!activeMobileNav)
+}
 
   return ( 
     <>
-      <header style={headerStyle}>
+      <header className="header-navigation" style={headerStyle}>
           <img style={headerImgStyle} src={logo} alt="ssssssss"/>
           <NavMain />
-          {/* <NavSocial /> */}
+        <div className="mobile-nav-container">
+          <button onClick={handleClick}> <FontAwesomeIcon icon={activeMobileNav ? faArrowLeft : faBars} /> </button> 
+        </div>
+
+        <MobileNav isActive={activeMobileNav} logo={logo}/>
+
       </header>
     </>
     );

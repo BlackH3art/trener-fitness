@@ -37,7 +37,7 @@ const ContactPage = () => {
         
         <div className="forms-controler-container">
           <div className="controling-buttons-container">
-            <div className={`first-option-div${reverse}`} tabIndex={0} onKeyPress={handleKeyPress} onClick={handleActiveCooperateForm} role="button"> <h3 className="form-title">zostań podopiecnym</h3></div>
+            <div className={`first-option-div${reverse}`} tabIndex={0} onKeyPress={handleKeyPress} onClick={handleActiveCooperateForm} role="button"> <h3 className="form-title">zostań podopiecznym</h3></div>
             <div className={`second-option-div${reverse}`} tabIndex={0} onKeyPress={handleKeyPress} onClick={handleActiveContactForm} role="button"> <h3 className="form-title">skontaktuj się ze mną</h3></div>
           </div>
 
