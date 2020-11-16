@@ -1,6 +1,11 @@
 header.header-navigation {
   display: flex;
-  
+  position: fixed;
+  background-color:  rgba(0, 0, 0, 0.5);
+  height: 80px;
+  width: 100%;
+  box-shadow: 5px 1px 10px rgb(99, 99, 99);
+  z-index: 2;
 }
 
 div.mobile-nav-container {

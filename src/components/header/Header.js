@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -13,32 +13,39 @@ import logo from '../img/logo2-white-other.png';
 
 const Header = () => {
 
-  const headerStyle = {
-    position: "fixed",
-    backgroundColor:  "rgba(0, 0, 0, 0.5)",
-    height: "80px",
-    width: "100%",
-    boxShadow: "5px 1px 10px rgb(99, 99, 99)",
-    zIndex: '2',
-  }
+
   const headerImgStyle = {
     display: "block",
     height: "90%",
     paddingTop: "5px"
   }
 
+
   const [activeMobileNav, setActiveMobileNav] = useState(false)
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
 
+  useEffect(() => {
 
-const handleClick = () => {
-  setActiveMobileNav(!activeMobileNav)
-}
+    const handleResize = () => {
+      setWindowSize(window.innerWidth)
+    }
+
+    window.addEventListener("resize", handleResize)
+
+  }, [windowSize])
+
+  const handleClick = () => {
+    setActiveMobileNav(!activeMobileNav)
+  }
+
+  const navMain = windowSize >= 1200 ? <NavMain /> : null
 
   return ( 
     <>
-      <header className="header-navigation" style={headerStyle}>
+      {/* <header className="header-navigation" style={headerStyle}> */}
+      <header className="header-navigation" >
           <img style={headerImgStyle} src={logo} alt="ssssssss"/>
-          <NavMain />
+          {navMain}
         <div className="mobile-nav-container">
           <button onClick={handleClick}> <FontAwesomeIcon icon={activeMobileNav ? faArrowLeft : faBars} /> </button> 
         </div>

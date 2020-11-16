@@ -1,10 +1,8 @@
 
 header nav.navMain {
-  position: absolute;
   display: flex;
-  top: 55%;
-  left: 30%;
-  transform: translateY(-30%);
+  height: 100%;
+  align-items: center;
   width: 700px;
   overflow: hidden;
 
@@ -12,11 +10,14 @@ header nav.navMain {
 header ul.ulMain {
   text-transform: uppercase;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   font-family: 'Mulish';
   font-weight: 400;
   color: #d9d9d9;
   font-size: 1em;
+  margin-bottom: 0;
+  height: 100%;
   width: 100%;
 }
 header ul.ulMain li {
